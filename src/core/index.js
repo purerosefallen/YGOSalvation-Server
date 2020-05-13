@@ -1025,8 +1025,8 @@ function State(server, game) {
  * @returns {Object} server instance
  */
 function HTTPServer() {
-    const keyFile = path.resolve(process.env.SSL + '\\private.key'),
-        certFile = path.resolve(process.env.SSL + '\\certificate.crt');
+    const keyFile = path.resolve(process.env.SSL_KEY),
+        certFile = path.resolve(process.env.SSL_CERT);
     try {
         const privateKey = fs.readFileSync(keyFile).toString(),
             certificate = fs.readFileSync(certFile).toString();
