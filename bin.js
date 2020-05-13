@@ -20,10 +20,10 @@ async function main() {
     console.log('[SERVER] YGO Salvation Server - Saving Yu-Gi-Oh!'.bold.green);
     const banlist = './http/manifest/banlist.json';
 
-    if (process.env.NODIST_X64 !== '0' || os.arch() === 'x64') {
+    /*if (process.env.NODIST_X64 !== '0' || os.arch() === 'x64') {
         console.error('Node is Running in 64bit mode, games can not start; SET NODIST_X64=0');
         process.exit();
-    }
+    }*/
     if (!ADMIN_SERVER_URL || !ADMIN_SERVER_USERNAME || !ADMIN_SERVER_PASSWORD) {
         console.error('Administrative Server and User are not configured, no database access, see README.MD for details.');
         process.exit();
